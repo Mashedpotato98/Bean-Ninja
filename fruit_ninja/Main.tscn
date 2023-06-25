@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Knife.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bean.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Apple.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Score.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bomb.tscn" type="PackedScene" id=5]
+[ext_resource path="res://watermelon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Hp.tscn" type="PackedScene" id=7]
+[ext_resource path="res://back.png" type="Texture" id=8]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 151, 202 )
+texture = ExtResource( 8 )
+
+[node name="Bean" parent="." instance=ExtResource( 2 )]
+position = Vector2( 79, 57 )
+
+[node name="Knife" parent="." instance=ExtResource( 1 )]
+position = Vector2( 178, 263 )
+
+[node name="Apple" parent="." instance=ExtResource( 3 )]
+position = Vector2( 182, 62 )
+
+[node name="Score" parent="." instance=ExtResource( 4 )]
+margin_left = 112.0
+margin_top = 1.0
+margin_right = 174.0
+margin_bottom = 39.0
+
+[node name="Bomb" parent="." instance=ExtResource( 5 )]
+
+[node name="WaterMelon" parent="." instance=ExtResource( 6 )]
+position = Vector2( 353, 181 )
+
+[node name="Hp" parent="." instance=ExtResource( 7 )]

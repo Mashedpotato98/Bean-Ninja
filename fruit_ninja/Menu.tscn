@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://MinecraftBoldItalic-1y1e.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://bean.png" type="Texture" id=3]
+[ext_resource path="res://apple.png" type="Texture" id=4]
+[ext_resource path="res://sword.png" type="Texture" id=5]
+[ext_resource path="res://back2.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 148, 199 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 28.0
+margin_top = 182.0
+margin_right = 400.0
+margin_bottom = 395.0
+custom_fonts/font = SubResource( 1 )
+text = "Credits:
+1.
+COMRADECHOnKy
+(programmer and artist)
+"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 68.0
+margin_top = 11.0
+margin_right = 197.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 2 )
+text = "BEAN NINJA"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 97.0
+margin_right = 192.0
+margin_bottom = 192.0
+custom_fonts/font = SubResource( 3 )
+text = "play"
+flat = true
+
+[node name="Bean" type="Sprite" parent="."]
+position = Vector2( 63, 106 )
+scale = Vector2( 5.67857, 5.96429 )
+texture = ExtResource( 3 )
+
+[node name="Sword" type="Sprite" parent="."]
+position = Vector2( 133, 313 )
+scale = Vector2( 4.99107, 6.44197 )
+texture = ExtResource( 5 )
+
+[node name="Apple" type="Sprite" parent="."]
+position = Vector2( 254, 40 )
+scale = Vector2( 6.58929, 5.92857 )
+texture = ExtResource( 4 )
+
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
